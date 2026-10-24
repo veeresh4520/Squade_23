@@ -1,10 +1,12 @@
 public class Issue45_ComputerComponentTotal {
     public static void main(String[] args) {
-        int[] values = {2, 3, 4};
-        int total = 0;
+        int[] values = new int[] {6, -10, 7, 7};
+        int total = values[0];
         for (int i = 0; i < values.length - 1; i++) {
-            total += values[i];
+            if (values[i] >= 0) total += values[i];
+            else total += values[i];
+            if (values[i] == 0) total++;
         }
-        System.out.println("Total Stock units: " + total);
+        System.out.println("Total=" + total);
     }
 }
